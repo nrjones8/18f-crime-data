@@ -126,7 +126,7 @@ plot_lagging_officer_heatmap <- function(df, save_image=FALSE) {
     geom_tile(aes(fill = delta_officer_rate)) +
     scale_fill_gradient2("Change in Officer Rate per 1000", low = 'blue', high = 'red') +
     theme_bw() +
-    scale_x_continuous('Time') +
+    scale_x_continuous('Year') +
     scale_y_discrete('State') +
     ggtitle('One Year Change in Officer rate per 1000') +
     # Center the damn title
@@ -161,7 +161,7 @@ plot_lagging_civilian_heatmap <- function(df, save_image=FALSE) {
     geom_tile(aes(fill = delta_civilian_rate)) +
     scale_fill_gradient2("Change in Civilian Employee Rate per 1000", low = 'blue', high = 'red') +
     theme_bw() +
-    scale_x_continuous('Time') +
+    scale_x_continuous('Year') +
     scale_y_discrete('State') +
     ggtitle('One Year Change in Civilian Employee rate per 1000') +
     # Center the damn title
