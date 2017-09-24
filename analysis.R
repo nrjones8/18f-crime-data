@@ -86,20 +86,6 @@ calculate_lags <- function(df, num_lags=1) {
   return(with_lag[rows_to_keep, cols_to_keep])
 }
 
-plot_yearly_summary <- function(df) {
-  # whyyyy
-  melted <- melt(df, id.vars='data_year')
-  
-  g <- ggplot(melted, aes(x = data_year, y = value)) +
-    geom_line(aes(color=variable)) +
-    #geom_hline(yintercept=0) +
-    scale_x_continuous("Year") +
-    # If only plotting subsets of all games, keep axis constant
-    ggtitle('Oh hai')
-  
-  print(g)
-}
-
 plot_officer_heatmap <- function(df, save_image=FALSE) {
   # Thanks to tutorial here: http://learnr.wordpress.com/2010/01/26/ggplot2-quick-heatmap-plotting/
   # Also good: http://quantcorner.wordpress.com/2013/11/02/creating-a-heatmap-to-visualize-returns-with-r-ggplot2/
